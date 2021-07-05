@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Snippets</title>
+<link rel="stylesheet" href="css/styles.css">
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>jQuery Code Snippets</h1>
+	</header>
+	<section>
+		<img src="images/image-4.jpg" alt="">
+		<p id="caption">I'm Back!</p>
+		<div class="buttons">
+			<button id="hide">Hide Me!</button>
+			<button id="show">Show Me!</button>
+			<button id="both">Toggle Me!</button>
+			<button id="slide">Slide Me!</button>
+			<button id="callBack">Call Back!</button>
+			<button id="fade">Fade me!</button>
+			</div>
+		<script> 
+			$("#caption").hide();
+		</script>
+		<script>
+			
+			$("#hide").click(function(){
+				$("img").hide();
+			});
+			
+			$("#show").click(function(){
+				$("img").show();
+			});
+			
+			$("#both").click(function(){
+				$("img").toggle();
+			});
+			
+			$("#slide").click(function(){
+				$("img").slideToggle();
+			});
+			
+			$("#callBack").click(function(){
+				$("img").fadeOut(2000);
+				$("img").fadeIn(2000, function() {
+					$("#caption").fadeIn(2000);
+				});
+			});
+			
+			$("#fade").click(function(){
+				$("img").fadeToggle();
+			});
+			
+			</script>
+	</section>
+  
+</body>
+</html>
